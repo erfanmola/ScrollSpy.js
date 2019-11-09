@@ -10,6 +10,7 @@ It is actively supported and maintained by contributors, Feel free to contribute
 - [x] Initial Commit
 - [x] Write basic README.md
 - [ ] Create page for library at github.io
+- [ ] Add Persian demos in test folder
 - [ ] Provide basic documentation in README.md
 - [ ] Create Complete Documentations
 - [ ] Provide CDN addresses for library
