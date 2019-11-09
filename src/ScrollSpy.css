@@ -1,0 +1,30 @@
+.scrollspy-indicator-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scrollspy-indicator-container li {
+  transition: all 0.15s;
+}
+
+.scrollspy-indicator-container li.spy-active {
+  font-weight: bold;
+  color: #d32f2f;
+  border-left: 5px solid #d32f2f;
+  /*
+  * For right-to-left languages, uncomment the styles below :
+  * border-left: none;
+  * border-right: $Active_Border_Width solid $Active_Border_Color;
+  */
+}
+
+.scrollspy-indicator-container li.spy-clickable {
+  cursor: pointer;
+}
+
+.scrollspy-indicator-container li.spy-clickable:hover {
+  color: #ef5350;
+}
+
+/*# sourceMappingURL=ScrollSpy.css.map */

@@ -1,0 +1,36 @@
+$Active_Color: #d32f2f;
+$Hover_Color: #ef5350;
+$Active_Border_Color: #d32f2f;
+$Active_Border_Width: 5px;
+
+.scrollspy-indicator-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scrollspy-indicator-container li {
+  transition: all .15s
+;
+}
+
+.scrollspy-indicator-container li.spy-active {
+  font-weight: bold;
+  color: $Active_Color;
+  border-left: $Active_Border_Width solid $Active_Border_Color;
+
+  /*
+  * For right-to-left languages, uncomment the styles below :
+  * border-left: none;
+  * border-right: $Active_Border_Width solid $Active_Border_Color;
+  */
+
+}
+
+.scrollspy-indicator-container li.spy-clickable {
+  cursor: pointer;
+}
+
+.scrollspy-indicator-container li.spy-clickable:hover {
+   color: $Hover_Color;
+}
