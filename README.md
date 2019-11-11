@@ -9,10 +9,9 @@ It is actively supported and maintained by contributors, Feel free to contribute
 #### TODO :
 - [x] Initial Commit
 - [x] Write basic README.md
+- [x] Add Persian demos in test folder
 - [ ] Create page for library at github.io
-- [ ] Add Persian demos in test folder
 - [ ] Provide basic documentation in README.md
 - [ ] Create Complete Documentations
-- [ ] Provide CDN addresses for library
 - [ ] Make library accessible as npm-package
 - [ ] Add some developer-friendly comments in the code

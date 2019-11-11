@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url("../font/Vazir.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: 'Vazir', sans-serif;
+    color: #606c71;
+    background: #f1f1f1;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+::selection{
+    background:#3BB9FF;
+    color:#FFF;
+}
+
+nav {
+    float: right;
+    width: 100%;
+    background: #607D8B;
+    position: fixed;
+    height: 92px;
+    z-index: 0;
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    float: left;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    background: rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.9);
+    margin: 26px 12px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 8px;
+    line-height: 40px;
+    font-size: 15px;
+}
+
+nav ul li.spy-clickable {
+    cursor: pointer;
+}
+
+nav ul li.spy-clickable:hover , nav ul li.spy-active {
+    background: rgba(255,255,255,0.6);
+}
+
+section {
+    float: right;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a.contribute {
+    color: #FFEB3B;
+    text-decoration: none;
+    transition: all .15s;
+}
+
+a.contribute:hover {
+    color: #FFC107;
+}
+
+
+section h1 {
+    font-size: 32px;
+}
+
+section p {
+    padding: 24px;
+    text-align: center;
+}
+
+section:nth-of-type(1) {
+    margin-top: 92px;
+    background: #455A64;
+}
+
+section:nth-of-type(2) {
+    background: #D32F2F;
+}
+
+section:nth-of-type(3) {
+    background: #1976D2;
+}
+
+section:nth-of-type(4) {
+    background: #388E3C;
+}
+
+section:nth-of-type(5) {
+    background: #FBC02D;
+}
+
+section:nth-of-type(6) {
+    background: #C2185B;
+}
