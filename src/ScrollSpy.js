@@ -14,13 +14,6 @@ function ScrollSpy(
         delay: 200,
         callbackOnChange: () => {},
         callbackOnDestroy: () => {}
-    },
-    indicator = {
-        element: null,
-        indicator_container_class: '',
-        indicator_item_class: '',
-        clickable: true,
-        forceActive: false,
     }
 ) {
 
@@ -46,11 +39,11 @@ function ScrollSpy(
         },
 
         Indicator: (settings_indicator = {
-            element: indicator['element'],
-            indicator_container_class: indicator['indicator_container_class'],
-            indicator_item_class: indicator['indicator_item_class'],
-            clickable: indicator['clickable'],
-            forceActive: indicator['forceActive'],
+            element: null,
+            indicator_container_class: '',
+            indicator_item_class: '',
+            clickable: true,
+            forceActive: false,
         }) => {
 
             indicator_settings_saved = settings_indicator;

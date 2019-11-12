@@ -4,6 +4,7 @@
  *
  * Note : this JS file is converted to ES5 using babel, for any contributions use ScrollSpy.js in src folder
  */
+
 "use strict";
 
 function ScrollSpy() {
@@ -12,13 +13,6 @@ function ScrollSpy() {
         delay: 200,
         callbackOnChange: function callbackOnChange() {},
         callbackOnDestroy: function callbackOnDestroy() {}
-    };
-    var indicator = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
-        element: null,
-        indicator_container_class: '',
-        indicator_item_class: '',
-        clickable: true,
-        forceActive: false
     };
     var callback_OnChange = typeof settings['callbackOnChange'] !== 'undefined' ? settings['callbackOnChange'] : function () {},
         callback_OnDestroy = typeof settings['callbackOnDestroy'] !== 'undefined' ? settings['callbackOnDestroy'] : function () {},
@@ -41,27 +35,25 @@ function ScrollSpy() {
         },
         Indicator: function Indicator() {
             var settings_indicator = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
-                element: indicator['element'],
-                indicator_container_class: indicator['indicator_container_class'],
-                indicator_item_class: indicator['indicator_item_class'],
-                clickable: indicator['clickable'],
-                forceActive: indicator['forceActive']
+                element: null,
+                indicator_container_class: '',
+                indicator_item_class: '',
+                clickable: true,
+                forceActive: false
             };
             indicator_settings_saved = settings_indicator;
             ForceActiveIndicator = settings_indicator['forceActive'];
 
             if (settings_indicator['element'] !== null || typeof settings_indicator['element'] !== 'undefined') {
                 settings_indicator['element'].innerHTML = '';
-
-                var _indicator = document.createElement('ul');
-
-                _indicator.classList.add('scrollspy-indicator-container');
+                var indicator = document.createElement('ul');
+                indicator.classList.add('scrollspy-indicator-container');
 
                 if (typeof settings_indicator['indicator_container_class'] !== 'undefined') {
-                    _indicator.classList.add(settings_indicator['indicator_container_class']);
+                    indicator.classList.add(settings_indicator['indicator_container_class']);
                 }
 
-                settings_indicator['element'].appendChild(_indicator);
+                settings_indicator['element'].appendChild(indicator);
                 Array.prototype.forEach.call(SpySections, function (element) {
                     var indicator_item = document.createElement('li');
 
@@ -70,8 +62,7 @@ function ScrollSpy() {
                     }
 
                     indicator_item.innerHTML = element[0].getAttribute('spy-title');
-
-                    _indicator.appendChild(indicator_item);
+                    indicator.appendChild(indicator_item);
 
                     if (settings_indicator['clickable'] !== false) {
                         indicator_item.classList.add('spy-clickable');

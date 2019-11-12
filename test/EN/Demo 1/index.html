@@ -118,8 +118,6 @@
                 praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
         </section>
 
-        <div id="scrollspy-indicator"></div>
-
         <hr class="main-divider">
 
         <section class="setup scrollspy" spy-title="Setup">
@@ -146,7 +144,7 @@
 
             <p>Finally, we're going to do the magic using JavaScript :</p>
             <pre><code class="hljs javascript"><i>// Initializing the ScrollSpy to the elements with class of 'scrollspy'</i>
-<b>let</b> spy <i>=</i> <b>new</b> ScrollSpy<i>(</i><i>{</i>
+<b>var</b> spy <i>=</i> <b>new</b> ScrollSpy<i>(</i><i>{</i>
     contexts_class<i>:</i> <b>'</b><b>scrollspy</b><b>'</b>
 <i>}</i><i>)</i><i>;</i>
 
@@ -155,9 +153,11 @@ spy<i>.</i>Indicator<i>(</i><i>{</i>
     element<i>:</i> document<i>.</i>getElementById<i>(</i><b>'</b><b>scrollspy-indicator</b><b>'</b><i>)</i>
 <i>}</i><i>)</i><i>;</i></code></pre>
 
-            <p>For more customization and controlling over the library, you can <a href="#">Read Documentations</a>.</p>
+            <p>For more customization and controlling over the library, you can <a href="https://erfanmola.github.io/ScrollSpy.js/">Read Documentations</a>.</p>
 
         </section>
+
+        <div id="scrollspy-indicator"></div>
 
         <footer>
 
@@ -171,7 +171,7 @@ spy<i>.</i>Indicator<i>(</i><i>{</i>
 
         <script>
             // Initializing the ScrollSpy to the elements with class of 'scrollspy'
-            let spy = new ScrollSpy({
+            var spy = new ScrollSpy({
                 contexts_class: 'scrollspy'
             });
 
@@ -185,7 +185,7 @@ spy<i>.</i>Indicator<i>(</i><i>{</i>
         <script>
 
             // Styling the indicator to be at center of the page vertically
-            let indicator = document.getElementById('scrollspy-indicator');
+            var indicator = document.getElementById('scrollspy-indicator');
             indicator.style.top = 'calc(50vh - ' + (indicator.offsetHeight / 2) + 'px)';
 
         </script>
