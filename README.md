@@ -5,24 +5,24 @@ For more info and control over the library you can [Read Documentations](https:/
 
 It is actively supported and maintained by contributors, Feel free to contribute.
 
-###Installation
+### Installation
 
-####Include CSS
+#### Include CSS
 First include the stylesheet in your HTML head (Optional):
 ```html
 <link rel="stylesheet" href="ScrollSpy.min.css">
 ```
 
-####Include JS
+#### Include JS
 Now include the JavaScript in your HTML footer :
 ```html
 <script src="ScrollSpy.min.js"></script>
 ```
 
 
-###Setup
+### Setup
 
-####HTML Markup
+#### HTML Markup
 Now let's create a HTML structure like below : 
 ```html
 <div class="scrollspy" spy-title="Section Title">Content</div>
@@ -35,7 +35,7 @@ Now let's create a HTML structure like below :
 <div id="indicator"></div>
 ```
 
-####Initializing with JS
+#### Initializing with JS
 Then, let's initialize the library for our markup :
 ```js
 var spy = new ScrollSpy({
@@ -43,7 +43,7 @@ var spy = new ScrollSpy({
 });
 ```
 
-###Initializing Options
+### Initializing Options
 Here is a full list of options that can be passed to library while initializing :
 ```js
 var spy = new ScrollSpy({
@@ -62,7 +62,7 @@ var spy = new ScrollSpy({
 |callbackOnDestroy|function that gets called after calling the destroy method.|
 
 
-###Indicator options
+### Indicator options
 Also here is a full list of options that can be passed to library while initializing an indicator :
 ```js
 spy.Indicator({
