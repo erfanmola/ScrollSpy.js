@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ScrollSpy.js</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="highlight-js/highlightjs.css">
+        <link rel="stylesheet" href="ScrollSpy.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <script src="ScrollSpy.min.js"></script>
+        <script src="highlight-js/highlight.pack.js"></script>
+
+        <div class="container">
+            <h1>ScrollSpy.js</h1>
+            <h2>Simple, pure, lightweight & is working (:</h2>
+        </div>
+
+        <div class="content">
+
+            <section class="scrollspy" spy-title="Installation">
+                <h2>Installation</h2>
+
+                <h3>Include CSS</h3>
+
+                <p>First include the stylesheet in your HTML head (Optional):</p>
+
+                <pre style='color:black;background:white;'><code class="hljs html"><b>&lt;</b><b>link</b> rel<i>=</i><b>"stylesheet"</b> href<i>=</i><b>"ScrollSpy.min.css"</b><b>></b></code></pre>
+
+                <h3>Include JS</h3>
+
+                <p>Now include the JavaScript in your HTML footer :</p>
+
+                <pre style='color:black;background:white;'><code class="hljs html"><b>&lt;</b><b>script</b> src<i>=</i><b>"ScrollSpy.min.js"</b><b>></b><b>&lt;/</b><b>script</b><b>></b></code></pre>
+
+            </section>
+
+            <section class="scrollspy" spy-title="Setup">
+                <h2>Setup</h2>
+
+                <h3>HTML Markup</h3>
+
+                <p>Now let's create a HTML structure like below : </p>
+
+                <pre><code class="hljs html"><b>&lt;</b><b>div</b> class<i>=</i><b>"scrollspy"</b> spy-title<i>=</i><b>"Section Title"</b><b>></b>Content<b>&lt;/</b><b>div</b><b>></b>
+<b>&lt;</b><b>div</b> class<i>=</i><b>"scrollspy"</b> spy-title<i>=</i><b>"Section Title"</b><b>></b>Content<b>&lt;/</b><b>div</b><b>></b>
+<b>&lt;</b><b>div</b> class<i>=</i><b>"scrollspy"</b> spy-title<i>=</i><b>"Section Title"</b><b>></b>Content<b>&lt;/</b><b>div</b><b>></b>
+<b>&lt;</b><b>div</b> class<i>=</i><b>"scrollspy"</b> spy-title<i>=</i><b>"Section Title"</b><b>></b>Content<b>&lt;/</b><b>div</b><b>></b>
+<b>&lt;</b><b>div</b> class<i>=</i><b>"scrollspy"</b> spy-title<i>=</i><b>"Section Title"</b><b>></b>Content<b>&lt;/</b><b>div</b><b>></b>
+<b>&lt;</b><b>div</b> class<i>=</i><b>"scrollspy"</b> spy-title<i>=</i><b>"Section Title"</b><b>></b>Content<b>&lt;/</b><b>div</b><b>></b>
+
+<b>&lt;</b><b>div</b> id<i>=</i><b>"indicator"</b><b>>&lt;/</b><b>div</b><b>></b></code></pre>
+
+                <h3>Initializing with JS</h3>
+
+                <p>Then, let's initialize the library for our markup :</p>
+
+                <pre><code class="hljs javascript"><b>var</b> spy <i>=</i> <b>new</b> ScrollSpy<i>(</i><i>{</i>
+    contexts_class<i>:</i> <b>'</b><b>scrollspy</b><b>'</b>
+<i>}</i><i>)</i><i>;</i></code></pre>
+            </section>
+
+            <section class="scrollspy" spy-title="Initializing Options">
+                <h2>Initializing Options</h2>
+
+                <p>Here is a full list of options that can be passed to library while initializing :</p>
+
+                <pre><code class="hljs javascript"><b>var</b> spy <i>=</i> <b>new</b> ScrollSpy<i>(</i><i>{</i>
+        contexts_class<i>:</i> <b>'</b><b>scrollspy</b><b>'</b><i>,</i>
+        delay<i>:</i> 200<i>,</i>
+        callbackOnChange<i>:</i> <b>function</b> <i>(</i>el<i>)</i> <i>{</i> <b>alert</b><i>(</i><b>'</b><b>Active Element Changed</b><b>'</b><i>)</i><i>;</i> <i>}</i><i>,</i>
+        callbackOnDestroy<i>:</i> <b>function</b> <i>(</i><i>)</i> <i>{</i> <b>alert</b><i>(</i><b>'</b><b>ScrollSpy Distroyed !</b><b>'</b><i>)</i><i>;</i> <i>}</i>
+<i>}</i><i>)</i><i>;</i></code></pre>
+
+                <div class="parameter">
+                    <kbd>contexts_class</kbd>
+                    <span>class of the elements that need to be tracked by the library.</span>
+                </div>
+
+                <div class="parameter">
+                    <kbd>delay</kbd>
+                    <span>time of delay between detecting scrolls, by default it's 200ms.</span>
+                </div>
+
+                <div class="parameter">
+                    <kbd>callbackOnChange</kbd>
+                    <span>function that gets called each time when active element of the page changes.</span>
+                </div>
+
+                <div class="parameter">
+                    <kbd>callbackOnDestroy</kbd>
+                    <span>function that gets called after calling the destroy method.</span>
+                </div>
+
+            </section>
+
+            <section class="scrollspy" spy-title="Indicator Options">
+                <h2>Indicator options</h2>
+
+                <p>Also here is a full list of options that can be passed to library while initializing an indicator :</p>
+
+                <pre><code class="hljs javascript">spy<i>.</i>Indicator<i>(</i><i>{</i>
+    element<i>:</i> document<i>.</i>getElementById<i>(</i><b>'</b><b>indicator</b><b>'</b><i>)</i><i>,</i>
+    indicator_container_class<i>:</i> <b>'</b><b>scrollspy-indicator</b><b>'</b><i>,</i>
+    indicator_item_class<i>:</i> <b>'</b><b>scrollspy-indicator-item</b><b>'</b><i>,</i>
+    clickable<i>:</i> <b>true</b><i>,</i>
+    forceActive<i>:</i> <b>false</b><i>,</i>
+<i>}</i><i>)</i><i>;</i></code></pre>
+
+                <div class="parameter">
+                    <kbd>element</kbd>
+                    <span>the element that will be used as indicator container.</span>
+                </div>
+
+                <div class="parameter">
+                    <kbd>indicator_container_class</kbd>
+                    <span>class of the indicator's container.</span>
+                </div>
+
+                <div class="parameter">
+                    <kbd>indicator_item_class</kbd>
+                    <span>class of the indicator's items.</span>
+                </div>
+
+                <div class="parameter">
+                    <kbd>clickable</kbd>
+                    <span>specifies whether the indicator's items will be clickable, check <a href="https://github.com/erfanmola/ScrollSpy.js/tree/master/test/EN/Demo%201">this demo</a>.</span>
+                </div>
+
+                <div class="parameter">
+                    <kbd>forceActive</kbd>
+                    <span>specifies whether the indicator must have an active element, check <a href="https://github.com/erfanmola/ScrollSpy.js/tree/master/test/EN/Demo%202">this demo</a>.</span>
+                </div>
+
+            </section>
+
+        </div>
+
+        <div id="indicator"></div>
+
+        <div class="container">
+            <h2>Feel free to contribute (:</h2>
+        </div>
+
+        <script>
+            var indicator = document.getElementById('indicator');
+
+            var spy = new ScrollSpy(
+                {
+                    contexts_class: 'scrollspy'
+                }
+            );
+
+            spy.Indicator({
+                element: indicator
+            });
+
+            indicator.style.top = 'calc(50vh - ' + (indicator.offsetHeight / 2) + 'px)';
+        </script>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+
+    </body>
+</html>

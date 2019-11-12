@@ -1,0 +1,141 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	background: #f5f5f5;
+}
+
+@-webkit-keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container {
+	float: right;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	-webkit-animation: gradientBG 15s ease infinite;
+	animation: gradientBG 15s ease infinite;
+	text-align: center;
+	color: white;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+.content {
+	float: right;
+	width: 100%;
+	padding: 24px 0;
+	text-align: center;
+}
+
+#indicator {
+	position: fixed;
+	left: 3%;
+	width: 14%;
+	background: white;
+	border: 1px solid rgba(0,0,0,0.05);
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+	border-radius: 15px;
+}
+
+#indicator ul {
+	float: right;
+	width: calc(100% - 16px);
+	padding: 8px;
+}
+
+#indicator ul li {
+	float: left;
+	width: calc(100% - 16px);
+	font-size: 15px;
+	padding: 12px 8px;
+	border-left-color: #D81B60;
+}
+
+#indicator ul li.spy-active {
+	color: #D81B60;
+}
+
+section.scrollspy {
+	float: right;
+	width: calc(60% - 48px);
+	padding: 0 24px;
+	background: white;
+	border-radius: 10px;
+	margin: 24px 20%;
+	border: 1px solid rgba(0,0,0,0.05);
+	box-shadow: 0 0 15px rgba(0,0,0,0.1);
+	text-align: left;
+	direction: ltr;
+}
+
+section.scrollspy h2 {
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding: 12px 0;
+	font-size: 20px;
+	color: #454545;
+}
+
+section.scrollspy h3 {
+	float: left;
+	width: 100%;
+	text-align: left;
+	font-size: 17px;
+	padding: 6px;
+	margin: 12px 0;
+	color: #454545;
+	border-left: 3px solid #D81B60;
+}
+
+.hljs {
+	padding: 12px;
+	border-bottom: 3px solid rgba(0,0,0,0.1);
+}
+
+.parameter {
+	float: left;
+	width: 100%;
+	padding: 18px 0;
+}
+
+kbd {
+	background: rgba(0,0,0,0.05);
+	color: rgba(0,0,0,0.8);
+	border-radius: 5px;
+	padding: 8px;
+	font-size: 13px;
+}
+
+.parameter span {
+	font-size: 15px;
+	color: #454545;
+}
+
+.parameter span:before {
+	content: ' : ';
+}
