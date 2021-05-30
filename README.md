@@ -1,4 +1,8 @@
-# [ScrollSpy.js](https://erfanmola.github.io/ScrollSpy.js/)
+<div style="text-align: center;padding: 0;margin: 0;">
+    <img src="https://raw.githubusercontent.com/erfanmola/ScrollSpy.js/master/ScrollSpy.png" alt="ScrollSpy.js" style="max-width: 100%;">
+</div>
+
+# [⭕️ ScrollSpy.js](https://erfanmola.github.io/ScrollSpy.js/)
 ScrollSpy is a pure, lightweight Javascript library which allows you detecting Elements enter/exit from the viewport and a built-in support for creating indicator for your elements.
 
 For more info and control over the library you can [Read Documentations](https://erfanmola.github.io/ScrollSpy.js/).
